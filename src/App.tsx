@@ -6,6 +6,7 @@ import FormColor from './components/FormColor';
 function App() {
   const [list, setList] = useState(new Values('red').all(10));
 
+
   console.log(list);
 
   return (
