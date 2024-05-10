@@ -8,7 +8,7 @@ const FormColor = ({ setList }) => {
     const handleGenerator = e => {
         e.preventDefault();
         try {
-            let colors = new Values(color).all(10);
+            let colors = new Values(color).all(50);
             setList(colors);
             setError(false);
         } catch (error) {
@@ -19,14 +19,19 @@ const FormColor = ({ setList }) => {
     }
 
     return ( 
-        <>
+        <div className="palet-color">
+            <div className="title">
+                <h1>Koolorgs!</h1>
+                <h3>Based on: <a href="https://coolors.co/">coolors.co</a></h3>
+            </div>
+            
             <form onSubmit={ handleGenerator }>
                 <input type="text" placeholder="#fff" onChange={e => setColor(e.target.value)} /> {/* create event onChange with allow function */}
                 <input type="submit" value="Generar" />
             </form>
             { error ? <p className="error">This color does not exist</p> :null }  {/* if error = true->p if not*/}
             
-        </>
+        </div>
      );
 }
  
