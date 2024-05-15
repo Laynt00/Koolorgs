@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+    font-family: 'hylia_serif_betaregular';
+    src: url('./assets/fonts/hyliaserifbeta-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/hyliaserifbeta-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 body{
-    font-family: 'Nunito', sans-serif;
+	font-family: hylia_serif_betaregular ;
     padding: 20px;
     margin: 0;
     background-color: #dee0e640;
 }
 
+.title{
+	text-align: center;
+}
+
+.form{
+	display: flex;
+	justify-content: center
+}
 .color-box {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+	
 }
 
 .colors-box .single-card{
@@ -58,4 +76,8 @@ body{
 }
 .single-card button img {
     width: 100%;
+}
+
+.footer{
+	float: right;
 }

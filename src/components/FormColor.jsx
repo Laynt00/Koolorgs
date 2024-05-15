@@ -22,10 +22,9 @@ const FormColor = ({ setList }) => {
         <div className="palet-color">
             <div className="title">
                 <h1>Koolorgs!</h1>
-                <h3>Based on: <a href="https://coolors.co/">coolors.co</a></h3>
             </div>
             
-            <form onSubmit={ handleGenerator }>
+            <form className="form" onSubmit={ handleGenerator }>
                 <input type="text" placeholder="#fff" onChange={e => setColor(e.target.value)} /> {/* create event onChange with allow function */}
                 <input type="submit" value="Generar" />
             </form>
